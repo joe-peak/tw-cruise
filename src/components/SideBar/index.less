@@ -1,0 +1,70 @@
+.side-bar {
+  background-color: #2d4054;
+  display: grid;
+  grid-template-rows: auto auto;
+  .menu-list {
+    background-color: #2d4054;
+    padding-top: 18px;
+    display: grid;
+    grid-template-rows: repeat(4, 45px);
+    grid-row-gap: 6px;
+    .menu-item {
+      display: grid;
+      grid-template-columns: 10% auto;
+      grid-column-gap: 12px;
+      align-items: center;
+      padding-left: 24px;
+      cursor: pointer;
+      color: #E1E4E6;
+      font-size: 14px;
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      &:hover {
+        background-color: #435466;
+        color: #00B4CF;
+      }
+      .icon {
+        font-size: 20px;
+      }
+    }
+  }
+.history {
+  display: grid;
+  grid-template-rows: 30px  auto;
+  &-title {
+    font-size: 24px;
+    color: #ccc;
+    line-height: 30px;
+    text-indent: 12px;
+  }
+  &-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    color: blue;
+    overflow: scroll;
+    &-item {
+      display: grid;
+      padding: 0;
+      grid-template-columns: auto auto;
+      grid-row-gap: 12px;
+      align-items: center;
+      font-size: 12px;
+      color: #999;
+      cursor: pointer;
+        &:hover {
+          color: #00B4CF;
+        }
+        .history-log {
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+        .middot {
+          font-weight: bold;
+          font-size: 24px;
+          text-indent: 12px;
+        }
+      }
+    }
+  }
+}
