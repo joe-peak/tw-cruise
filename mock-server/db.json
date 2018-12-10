@@ -8,8 +8,7 @@
       "ip": "192.168.1.80",
       "location": "/var/lib/cruise-agent",
       "resources": [
-        "Safari",
-        "Chrome"
+        "Safari"
       ],
       "id": 2
     },
@@ -23,7 +22,8 @@
       "id": 3,
       "resources": [
         "Firefox",
-        "Safari"
+        "OK",
+        "KKL"
       ]
     },
     {
@@ -34,8 +34,7 @@
       "ip": "192.168.1.102",
       "location": "/var/lib/cruise-agent",
       "resources": [
-        "Safari",
-        "Ubuntu"
+        "Safari"
       ],
       "id": 4
     },
@@ -48,7 +47,6 @@
       "location": "/var/lib/cruise-agent",
       "id": 5,
       "resources": [
-        "谷歌",
         "Safari"
       ]
     },

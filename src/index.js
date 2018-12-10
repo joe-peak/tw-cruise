@@ -61,6 +61,8 @@ class Index extends PureComponent {
     closeModal = () => {
       this.setState({
         visible: false,
+        top: 0, 
+        left: 0,
       });
     }
   
@@ -84,14 +86,12 @@ class Index extends PureComponent {
       const historys = agents.map(({ name }) => name);
       return (
         <div className="wrapper">
-          { visible && (
-            <PopModal
+          <PopModal
               visible={visible}
               onSave={this.handleSaveAgent}
               onCancel={this.closeModal}
               position={position}
             />
-          )}
           <TopHeader />
           <div className="container">
             <SideBar historys={historys} />
