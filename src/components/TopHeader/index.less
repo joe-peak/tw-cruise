@@ -21,51 +21,72 @@
           position: relative;
           height: 0px;
           width: 0px;
-          display: block;
-          margin-top: -8px;
+          opacity: 1;
+          z-index: -1;
+          margin-top: 8px;
           border: 8px solid transparent;
           border-bottom: 8px solid #00B4CF;
-          &:after{
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: -8px;
+          .core-arrow-up {
+            height: 0px;
+            width: 0px;
+            display: block;
+            border: 8px solid transparent;
             border-bottom: 8px solid #FFF;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
+            margin-left: -8px;
+            margin-top: -6px;
           }
+          // &:after{
+          //   content: '';
+          //   position: absolute;
+          //   top: 2px;
+          //   left: -8px;
+          //   border-bottom: 8px solid #FFF;
+          //   border-left: 8px solid transparent;
+          //   border-right: 8px solid transparent;
+          // }
         }
         .arrow-down {
           position: relative;
           height: 0px;
           width: 0px;
-          margin-top: 8px;
-          display: none;
+          margin-top: -8px;
+          opacity: 1;
+          z-index: 1;
           border: 8px solid transparent;
           border-top: 8px solid #00B4CF;
-          &:after{
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -8px;
+          .core-down-up {
+            height: 0px;
+            width: 0px;
+            margin-top: -10px;
+            border: 8px solid transparent;
             border-top: 8px solid #FFF;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
+            margin-left: -8px;
           }
+          // &:after{
+          //   content: '';
+          //   position: absolute;
+          //   top: -10px;
+          //   left: -8px;
+          //   border-top: 8px solid #FFF;
+          //   border-left: 8px solid transparent;
+          //   border-right: 8px solid transparent;
+          // }
         }
         &:hover {
-          .select-box {
-            display: block;
-          }
           .arrow-down {
-            display: block;
+            z-index: -1;
           }
           .arrow-up {
-            display: none;
+            z-index: 1;
+          }
+          .select-box {
+            z-index: 999;
+            opacity: 1;
           }
         }
         .select-box {
-          display: none;
+          z-index: -1;
+          opacity: 0;
           position: absolute;
           width: 116px;
           left: -36px;

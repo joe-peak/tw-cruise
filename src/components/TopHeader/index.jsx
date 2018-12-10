@@ -16,8 +16,14 @@ const TopHeader  = () => {
           <div className="avatar">
             <img src={avatar} alt="avatar"/>
           </div>
-          <div className="arrow-up"></div>
-          <div className="arrow-down"></div>
+          <div>
+            <div className="arrow-up">
+              <div className="core-arrow-up"></div>
+            </div>
+            <div className="arrow-down">
+              <div className="core-down-up"></div>
+            </div>
+          </div>
           <div className="select-box">
             <div className="select-list">
               <div className="profile select-item">

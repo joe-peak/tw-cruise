@@ -3,9 +3,18 @@ import './index.less';
 
 const NavBox = () => (
   <div className="nav-box">
-    <div className="category-tab all">All</div>
-    <div className="category-tab">Physical</div>
-    <div className="category-tab">Virtual</div>
+    <div className="category-tab">
+      All
+      <div className="active-line"></div>
+    </div>
+    <div className="category-tab">
+      Physical
+      <div className="active-line"></div>
+    </div>
+    <div className="category-tab">
+      Virtual
+      <div className="active-line"></div>
+    </div>
     <div className="filter-box">
         <div className="search-box">
           <input type="text"/>
