@@ -20,12 +20,11 @@
       "type": "physical",
       "ip": "192.168.1.117",
       "location": "/var/lib/cruise-agent",
+      "id": 3,
       "resources": [
         "Firefox",
-        "Safari",
-        "Chrome"
-      ],
-      "id": 3
+        "Safari"
+      ]
     },
     {
       "name": "bjstdmngbdr11.thoughtworks.com",
@@ -36,8 +35,7 @@
       "location": "/var/lib/cruise-agent",
       "resources": [
         "Safari",
-        "Ubuntu",
-        "Chrome"
+        "Ubuntu"
       ],
       "id": 4
     },
@@ -48,12 +46,11 @@
       "type": "physical",
       "ip": "192.168.1.110",
       "location": "/var/lib/cruise-agent",
+      "id": 5,
       "resources": [
         "谷歌",
-        "火狐",
         "Safari"
-      ],
-      "id": 5
+      ]
     },
     {
       "name": "bjstdmngbdr02.thoughtworks.com",

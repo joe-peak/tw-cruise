@@ -31,6 +31,12 @@ const AgentItem = ({ agentData, onDelete, onAdd }) => {
     onAdd(e, agentData);
   };
 
+  const renderResources = resources.map(agent => (
+                  <div key={agent} className="agent-label">
+                    {agent} <i onClick={() => deleteAgent(agent)} className="icon iconfont icon-trash"></i>
+                  </div>
+                ));
+
   return (
     <div className="agents-item">
       <div className="os-logo">
@@ -48,7 +54,7 @@ const AgentItem = ({ agentData, onDelete, onAdd }) => {
             <i className="icon iconfont icon-info"></i> {ip}
           </div>
           <div className="folder-path">
-          <i className="icon iconfont icon-folder"></i> {location}
+            <i className="icon iconfont icon-folder"></i> {location}
           </div>
         </div>
         <div className="operation">
@@ -57,13 +63,7 @@ const AgentItem = ({ agentData, onDelete, onAdd }) => {
               <i className="icon iconfont icon-plus"></i>
             </div>
             <div className="added-agents" style={{ 'gridTemplateColumns': `repeat(${resources.length}, auto)` }}>
-              {
-                resources.map(agent => (
-                  <div key={agent} className="agent-label">
-                    {agent}<i onClick={() => deleteAgent(agent)} className="icon iconfont icon-trash"></i>
-                  </div>
-                ))
-              }
+              {renderResources}
             </div>
           </div>
           <div className="deny-agent">

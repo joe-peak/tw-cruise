@@ -1,8 +1,16 @@
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
   devServer: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:3001",
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' },
+      },
+    }
   },
   resolve: {
     extensions: ['.js', 'jsx', '.json'],
@@ -12,6 +20,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
+        include: path.resolve(__dirname, "./src"),
         use: {
           loader: 'babel-loader'
         }

@@ -11,7 +11,7 @@ import AgentList from './components/AgentList/index.jsx';
 import './index.less';
 import '../assets/font-icons/fonts.less';
 
-const baseUrl = 'http://localhost:3001';
+const baseUrl = '/api';
 
 class Index extends PureComponent {
     state = {
@@ -28,7 +28,7 @@ class Index extends PureComponent {
     }
 
     handleQuery = () => {
-      axios.get(`${baseUrl}/agents`).then(({ data = [] }) => {
+      axios.get(`/api/agents`).then(({ data = [] }) => {
         this.setState({
           agents: data,
         })
