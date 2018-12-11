@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'source-map',
+  // devtool: 'source-map',
   devServer: {
     proxy: {
       "/api": {
@@ -38,26 +38,6 @@ module.exports = {
           }
         }
       },
-      {
-        test: /\.svg$/,
-        use: ['file-loader', 'svg-inline-loader']
-      },
-      // {
-      //   test: /\.svg$/,
-      //   exclude: /node_modules/,
-      //   use: [
-      //     'file-loader',
-      //     {
-      //       loader: 'svg-react-loader',
-      //       options: {
-      //           tag: 'symbol',
-      //           // attrs: {
-      //           //     title: 'log',
-      //           // },
-      //           name: 'SVG',
-      //       },
-      //   }],
-      // }
     ]
   },
   plugins: [
